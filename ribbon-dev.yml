@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: springcloud_ribbon_resttemplate_client
+server:
+  port: 9090
+HELLO-SERVICE: #修改负载均衡方式
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+
